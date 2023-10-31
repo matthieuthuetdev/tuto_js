@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        const a = 3;
-        const note = [0,4,8,15,19,20,12]
-        const personne = {
-            firstname: "Matthieu",
-            lastname: "THUET",
-            age: 21,
-            note : [20,15,18,14]
-        }
+        const age = 18;
+const pays = "FR";
+
+const peutConduireFrance = pays === "FR" && age >= 18;
+const peutConduireUS = pays === "US" && age >= 16;
+
+if (peutConduireFrance || peutConduireUS) {
+  console.log("Vous avez le droit de conduire.");
+} else {
+  console.log("Vous n'avez pas le droit de conduire.");
+}
 
     </script>
 </body>
+
 </html>
