@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        phrase = "coucou coucou comment tu vas ?? moi je pète pète pète la forme !!!"
+const frequencies = {}
+const ignored = [',', '?', ':', '!', '«', '»', '…', '’']
+let cleanedPhrase = phrase.toLowerCase()
+for(let character of ignored) {
+    cleanedPhrase = cleanedPhrase.replaceAll(character, '')
+}
+const words = cleanedPhrase.split(' ')
+for(let word of words) {
+    if (word !== '' && word.length >= 4) {
+        if(frequencies[word]) {
+            frequencies[word]++
+        } else {
+            frequencies[word] = 1
+        }
+    }
+}
+const frequenciesArray = []
+for (let k in frequencies) {
+    frequenciesArray.push({
+        word: k,
+        count: frequencies[k]
+    })
+}
+frequenciesArray.sort((a, b) => b.count - a.count)
+alert(`Les mots les plus fréquents sont "${frequenciesArray[0].word}" (${frequenciesArray[0].count}), "${frequenciesArray[1].word}" (${frequenciesArray[1].count}), "${frequenciesArray[2].word}" (${frequenciesArray[2].count})`)
+    </script>
+</body>
+
+</html>
