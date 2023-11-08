@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function canDriveptuto (age, pays) {
+            if ((age >= 18 && pays === "fr") || (age >= 16 && pays === "us")) {
+                return true;
+            }
+            return false
+        }
+        let result = canDrive(13, "fr")
+        console.log(result);
+    </script>
+</body>
+
+</html>

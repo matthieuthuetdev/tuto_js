@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function get_random_number(max) {
+            return Math.floor(Math.random() * (max + 1));
+        }
+
+        const solution = get_random_number(10);
+        function is_right(number) {
+            return number === solution;
+        }
+
+        function guess() {
+            const number = prompt("Rentrez un nombre :")*1
+            
+            return is_right(number);
+
+        }
+        for (let i = 0; i < 3; i++) {
+            if (guess()) {
+                alert("Bravo ! Vous avez gagné.");
+            } else {
+                alert("vous avez échoué !")
+            }
+        }
+    </script>
+</body>
+
+</html>
